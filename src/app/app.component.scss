@@ -1,0 +1,10 @@
+@import "./shared/styles/colors.scss";
+@import "./shared/styles/mixins.scss";
+
+canvas {
+  @include centered;
+  background: #18251B;
+  width: 128rem;
+  height: 76rem;
+  border: 1px solid $color-border;
+}

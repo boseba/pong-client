@@ -1,0 +1,173 @@
+/* NunitoSans ExtraLight -100 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: light;
+  font-weight: 100;
+  src: local('NunitoSans ExtraLight'), local('NunitoSans-Extra-Light'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-ExtraLight.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-ExtraLight.woff') format('woff'),
+    /* Modern Browsers */
+}
+
+/* NunitoSans ExtraLight Italic -100 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: italic;
+  font-weight: 100;
+  src: local('NunitoSans ExtraLight Italic'), local('NunitoSans-Extra-Light-Italic'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-ExtraLightItalic.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-ExtraLightItalic.woff2') format('woff'),
+    /* Modern Browsers */
+}
+
+/* NunitoSans Light - 200 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: light;
+  font-weight: 200;
+  src: local('NunitoSans Light'), local('NunitoSans-Light'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-Light.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-Light.woff') format('woff'),
+    /* Modern Browsers */
+}
+
+/* NunitoSans Light Italic - 200 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: italic;
+  font-weight: 200;
+  src: local('NunitoSans Light Italic'), local('NunitoSans-Light-Italic'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-LightItalic.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-LightItalic.woff') format('woff'),
+    /* Modern Browsers */
+}
+
+/* NunitoSans Regular - 400 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NunitoSans'), local('NunitoSans-Regular'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-Regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-Regular.woff') format('woff'),
+    /* Modern Browsers */
+}
+
+/*  NunitoSans Italic - 400 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('NunitoSans Italic'), local('NunitoSans-Italic'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-Italic.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-Italic.woff') format('woff'),
+    /* Modern Browsers */
+}
+
+/* NunitoSans SemiBold - 500 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-weight: 600;
+  src: local('NunitoSans SemiBold'), local('NunitoSans-SemiBold'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-SemiBold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-SemiBold.woff') format('woff'),
+    /* Modern Browsers */
+}
+
+/*  NunitoSans SemiBold Italic - 500 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('NunitoSans SemiBold Italic'), local('NunitoSans-SemiBold-Italic'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-SemiBoldItalic.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-SemiBoldItalic.woff') format('woff'),
+    /* Modern Browsers */
+}
+
+/* NunitoSans Bold - 700 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NunitoSans Bold'), local('NunitoSans-Bold'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-Bold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-Bold.woff') format('woff'),
+    /* Modern Browsers */
+}
+
+/* NunitoSans Bold Italic - 700 */
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('NunitoSans Bold Italic'), local('NunitoSans-Bold-Italic'),
+    url('../../assets/fonts/nunito-sans/NunitoSans-BoldItalic.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../../assets/fonts/nunito-sans/NunitoSans-BoldItalic.woff') format('woff'),
+    /* Modern Browsers */
+}
+
+// /* noto-sans-sc-100 - chinese-simplified_vietnamese_japanese */
+// @font-face {
+//     font-family: 'Noto';
+//     font-style: normal;
+//     font-weight: 100;
+//     src: local('Noto Thin'), local('NotoSansSC-Thin'),
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-100.woff2') format('woff2'), /* Super Modern Browsers */
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-100.woff') format('woff'), /* Modern Browsers */
+//   }
+//   /* noto-sans-sc-300 - chinese-simplified_vietnamese_japanese */
+//   @font-face {
+//     font-family: 'Noto';
+//     font-style: normal;
+//     font-weight: 300;
+//     src: local('Noto Light'), local('NotoSansSC-Light'),
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-300.woff2') format('woff2'), /* Super Modern Browsers */
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-300.woff') format('woff'), /* Modern Browsers */
+//   }
+//   /* noto-sans-sc-regular - chinese-simplified_vietnamese_japanese */
+//   @font-face {
+//     font-family: 'Noto';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: local('Noto Regular'), local('NotoSansSC-Regular'),
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-regular.woff2') format('woff2'), /* Super Modern Browsers */
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-regular.woff') format('woff'), /* Modern Browsers */
+//   }
+//   /* noto-sans-sc-500 - chinese-simplified_vietnamese_japanese */
+//   @font-face {
+//     font-family: 'Noto';
+//     font-style: normal;
+//     font-weight: 500;
+//     src: local('Noto Medium'), local('NotoSansSC-Medium'),
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-500.woff2') format('woff2'), /* Super Modern Browsers */
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-500.woff') format('woff'), /* Modern Browsers */
+//   }
+//   /* noto-sans-sc-700 - chinese-simplified_vietnamese_japanese */
+//   @font-face {
+//     font-family: 'Noto';
+//     font-style: normal;
+//     font-weight: 700;
+//     src: local('Noto Bold'), local('NotoSansSC-Bold'),
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-700.woff2') format('woff2'), /* Super Modern Browsers */
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-700.woff') format('woff'), /* Modern Browsers */
+//   }
+//   /* noto-sans-sc-900 - chinese-simplified_vietnamese_japanese */
+//   @font-face {
+//     font-family: 'Noto';
+//     font-style: normal;
+//     font-weight: 900;
+//     src: local('Noto Black'), local('NotoSansSC-Black'),
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-900.woff2') format('woff2'), /* Super Modern Browsers */
+//          url('../../assets/fonts/noto-sans-sc-v2-chinese-simplified_vietnamese_japanese-900.woff') format('woff'), /* Modern Browsers */
+//   }
