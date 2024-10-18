@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, fromEvent, Observable, Subject } from 'rxjs';
-import { ISize } from '../interfaces/size.interface';
+import { Size } from '../interfaces/size.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -10,14 +10,14 @@ export class DocumentService {
   private _isLoaded: BehaviorSubject<boolean> = new BehaviorSubject(false);
   private _isRendered: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-  private _resized: Subject<ISize> = new Subject();
+  private _resized: Subject<Size> = new Subject();
   private _keyDown: Subject<KeyboardEvent> = new Subject();
   private _keyUp: Subject<KeyboardEvent> = new Subject();
 
   private _resizeOberver!: Observable<Event>;
 
   isActive: Observable<boolean>;
-  resized: Observable<ISize>;
+  resized: Observable<Size>;
   loaded: Observable<boolean>;
   rendered: Observable<boolean>;
 

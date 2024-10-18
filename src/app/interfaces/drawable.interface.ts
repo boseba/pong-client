@@ -1,3 +1,4 @@
-export interface IDrawable {
+export interface Drawable {
   draw(): void;
+  drawBoundaries(): void;
 }

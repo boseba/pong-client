@@ -1,4 +1,4 @@
-export interface IRectangle {
+export interface Rectangle {
   left: number;
   top: number;
   right: number;

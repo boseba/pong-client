@@ -1,5 +1,4 @@
-import { IOffset } from "../interfaces/offset.interface";
-import { ISize } from "../interfaces/size.interface";
+import { Size, Offset } from "../../interfaces/interfaces.exports";
 
 export class Boundaries {
   left!: number;
@@ -9,13 +8,13 @@ export class Boundaries {
   width!: number;
   height!: number;
 
-  constructor(offset?: IOffset, size?: ISize) {
+  constructor(offset?: Offset, size?: Size) {
     if(offset && size) {
       this.update(offset, size);
     }
   }
 
-  update(offset: IOffset, size: ISize) {
+  update(offset: Offset, size: Size) {
     this.left = offset.x - (size.width / 2);
     this.top = offset.y - (size.height / 2);
     this.right = offset.x + (size.width / 2);
