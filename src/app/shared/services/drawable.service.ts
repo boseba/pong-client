@@ -18,9 +18,16 @@ export class DrawableService {
     this.context2D.strokeStyle = strokeColor;
   }
 
-  protected blur(color: string, intensity: number) {
+  protected blur(color: string, intensity: number, x?: number, y?: number) {
     this.context2D.shadowBlur = intensity;
     this.context2D.shadowColor = color;
+
+    if(x) {
+      this.context2D.shadowOffsetX = x;
+    }
+    if(y) {
+      this.context2D.shadowOffsetY = y;
+    }
   }
 
   protected resetBlur() {

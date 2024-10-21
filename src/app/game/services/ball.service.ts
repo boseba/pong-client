@@ -13,12 +13,14 @@ import { GameContext } from '../../models/game-context.model';
   providedIn: 'root'
 })
 export class BallService extends DrawableService implements Updatable, Drawable {
-  private out: Subject<Position> = new Subject();
+  private ballOutSubject: Subject<Position> = new Subject();
+  private ballSubject: Subject<Ball> = new Subject();
   private miss: boolean = false;
   private ball: Ball;
   private previousPositions: Offset[] = [];
 
-  out$: Observable<Position> = this.out.asObservable();
+  out$: Observable<Position> = this.ballOutSubject.asObservable();
+  ball$: Observable<Ball> = this.ballSubject.asObservable();
 
   constructor(gameContext: GameContext) {
     super(gameContext);
@@ -28,7 +30,7 @@ export class BallService extends DrawableService implements Updatable, Drawable 
   }
 
   draw() {
-    this.drawTrail();
+      this.drawTrail();
     this.drawBall();
   }
 
@@ -50,17 +52,25 @@ export class BallService extends DrawableService implements Updatable, Drawable 
 
     if(this.miss) {
       if(this.ball.boundaries.right <= 0) {
-        this.out.next(Position.Left);
+        this.ballOutSubject.next(Position.Left);
       } else if (this.ball.boundaries.left >= this.gameContext.size.width) {
-        this.out.next(Position.Right);
+        this.ballOutSubject.next(Position.Right);
       }
     }
   }
 
   pulse() {
     this.ball.speed *= 2;
+    this.ball.backgroundColor = Ball.pulsedColor;
+    this.ball.trailColor = Ball.pulsedTrailColor;
+    this.ball.strokeColor = Ball.pulsedStrokeColor;
+    this.ball.blurColor = Ball.pulsedStrokeColor;
     setTimeout(() => {
       this.ball.speed /= 2;
+      this.ball.backgroundColor = Ball.defaultColor;
+      this.ball.trailColor = Ball.defaultTrailColor;
+      this.ball.strokeColor = Ball.defaultStrokeColor;
+      this.ball.blurColor = Ball.defaultStrokeColor;
     }, 2000);
   }
 
@@ -131,11 +141,14 @@ export class BallService extends DrawableService implements Updatable, Drawable 
 
   private drawBall(): void {
     this.style(this.ball.backgroundColor, 2, this.ball.strokeColor);
+    this.blur(this.ball.blurColor, this.ball.blurSize);
 
     this.context2D.beginPath();
     this.context2D.arc(this.ball.offset.x, this.ball.offset.y, this.ball.size.width / 2, 0, 2 * Math.PI);
     this.context2D.fill();
     this.context2D.stroke();
+
+    this.resetBlur();
   }
 
   private updateBall(delay: number) {
@@ -145,6 +158,7 @@ export class BallService extends DrawableService implements Updatable, Drawable 
     }
 
     this.ball.updatePosition(this.ball.offset.x + (this.ball.direction.x * this.ball.speed * delay), this.ball.offset.y + (this.ball.direction.y * this.ball.speed * delay));
+    this.ballSubject.next(this.ball);
   }
 
   private updateTrail() {

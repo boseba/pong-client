@@ -7,6 +7,7 @@ import { gameContextFactory } from './providers/game-context.factory';
 import { BallService } from './game/services/ball.service';
 import { PlayersService } from './game/services/players.service';
 import { GameContext } from './models/game-context.model';
+import { throttleTime } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('canvas') canvasRef!: ElementRef;
   title = 'Pong game';
   gameService!: GameService;
+  fps: number = 0;
 
   private _playing: boolean = false;
   
@@ -51,6 +53,8 @@ export class AppComponent implements AfterViewInit {
       this.documentService.keyUp.subscribe((event: KeyboardEvent) => this.onKeyUp(event));
 
       this.gameService.start();
+
+      this.gameService.fps$.pipe(throttleTime(1000)).subscribe(fps => this.fps = Math.round(fps));
     }
   }
 

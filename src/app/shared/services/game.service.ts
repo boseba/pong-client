@@ -17,7 +17,8 @@ export class GameService extends DrawableService {
   private _isPlaying: boolean = false;
   private game!: Game;
   private backgroundData!: ImageData;
-  private _prevTimeStamp: number = 0;
+  private lastFrameTime: number = 0;
+  private fps: Subject<number> = new Subject();
   private _keyPressed: any = {};
   
   private readonly backgroundColor: string = '#18251B';
@@ -25,6 +26,7 @@ export class GameService extends DrawableService {
   private readonly linesWidth: number = 8;
 
   playing$ = this._playing.asObservable();
+  fps$ = this.fps.asObservable();
 
   constructor(protected override gameContext: GameContext, private playerService: PlayersService, private ballService: BallService) {
     super(gameContext);
@@ -41,9 +43,14 @@ export class GameService extends DrawableService {
   }
 
   run(timeStamp: number) {
-    const delay = (timeStamp - this._prevTimeStamp) / 1000;
+    const delay = (timeStamp - this.lastFrameTime) / 1000;
 
-    this._prevTimeStamp = timeStamp;
+    if (this.lastFrameTime) {
+      const deltaTime = (timeStamp - this.lastFrameTime) / 1000; // in seconds
+      this.fps.next(1 / deltaTime);
+    }
+
+    this.lastFrameTime = timeStamp;
 
     this.draw();
 
